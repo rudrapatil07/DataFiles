@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [paratest]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="test_mod1(failed)">
+    <classes>
+      <class name="parallel.Yahoo">
+        <methods>
+          <include name="open_yahoo"/>
+        </methods>
+      </class> <!-- parallel.Yahoo -->
+    </classes>
+  </test> <!-- test_mod1(failed) -->
+  <test thread-count="5" parallel="tests" name="testmod3(failed)">
+    <classes>
+      <class name="parallel.Amezon">
+        <methods>
+          <include name="Amezon_op"/>
+        </methods>
+      </class> <!-- parallel.Amezon -->
+    </classes>
+  </test> <!-- testmod3(failed) -->
+  <test thread-count="5" parallel="tests" name="testmod2(failed)">
+    <classes>
+      <class name="parallel.Facebook">
+        <methods>
+          <include name="Facebook_op"/>
+        </methods>
+      </class> <!-- parallel.Facebook -->
+    </classes>
+  </test> <!-- testmod2(failed) -->
+</suite> <!-- Failed suite [paratest] -->
